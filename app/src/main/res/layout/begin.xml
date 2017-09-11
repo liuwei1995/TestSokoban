@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="   Welcome to play Tuixiangzhi game!"
+        android:textSize="26sp" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/begin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:onClick="onClick"
+        android:src="@drawable/exit" />
+
+    <ImageButton
+        android:id="@+id/begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/exit"
+        android:layout_centerVertical="true"
+        android:onClick="onClick"
+        android:src="@drawable/begin" />
+    
+</RelativeLayout>
