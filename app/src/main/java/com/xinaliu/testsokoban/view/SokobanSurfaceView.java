@@ -134,7 +134,6 @@ public class SokobanSurfaceView extends SurfaceView implements
         if (map == null || map.length <= 0)return;
         this.map = map;
         this.tem =  copy(map);
-
         getMapDetail();
         intPic();
         bee_cachedThreadPool = Executors.newCachedThreadPool();
@@ -243,8 +242,7 @@ public class SokobanSurfaceView extends SurfaceView implements
             }
         }
         mSurfaceHolder.unlockCanvasAndPost(canvas);
-        if (backList != null && backList.size() == 0)
-            backList.add(copy(tem));
+
         if (goalNumber == 0){
             Toast.makeText(getContext(),"恭喜你通过了",Toast.LENGTH_LONG).show();
         }
@@ -299,8 +297,9 @@ public class SokobanSurfaceView extends SurfaceView implements
         if(bee_cachedThreadPool != null)
             bee_cachedThreadPool.shutdownNow();
 
-        if(backList == null || backList.size() <= 1)return;
-        tem = backList.remove(backList.size() - 2);
+        if(backList == null || backList.size() <= 0)return;
+        backList.remove(backList.size() - 1);
+        tem = backList.get(backList.size() - 1);
         advanceList.add(copy(tem));
 
         bee_cachedThreadPool = Executors.newCachedThreadPool();
@@ -318,6 +317,7 @@ public class SokobanSurfaceView extends SurfaceView implements
     public synchronized void up(){
         if (tem == null || map == null || backList == null)return;
         if (personRow <= 0)return;
+        backList.add(copy(tem));
         int i2 = tem[personRow - 1][personColumn];
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
             return;
@@ -371,11 +371,11 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        backList.add(copy(tem));
     }
     public synchronized void below(){
         if (tem == null || map == null || backList == null)return;
         if (personRow >= row)return;
+        backList.add(copy(tem));
         int i2 = tem[personRow + 1][personColumn];
 
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
@@ -433,11 +433,11 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        backList.add(copy(tem));
     }
     public synchronized void left(){
         if (tem == null || map == null || backList == null)return;
         if (personColumn == 0)return;
+        backList.add(copy(tem));
         int i2 = tem[personRow][personColumn - 1];
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
             return;
@@ -491,12 +491,11 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        backList.add(copy(tem));
     }
     public synchronized void right(){
         if (tem == null || map == null || backList == null)return;
         if (personColumn >= column)return;
-
+        backList.add(copy(tem));
         int i2 = tem[personRow][personColumn + 1];
 
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
@@ -553,7 +552,6 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        backList.add(copy(tem));
     }
 
 
