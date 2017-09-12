@@ -82,6 +82,7 @@ public class GameActivity extends AppCompatActivity implements SurfaceHolder.Cal
             mSokobanSurfaceView.start(GameStateData.gameStateDataArray[p]);
         }
         else if (id == R.id.advance){
+            mSokobanSurfaceView.advance();
             Toast.makeText(this,"努力建设中",Toast.LENGTH_LONG).show();
         }
     }

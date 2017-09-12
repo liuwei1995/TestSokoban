@@ -129,7 +129,8 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool.shutdownNow();
         tem = null;
         boxRectList = new ArrayList<>();
-        temList = new ArrayList<>();
+        backList = new ArrayList<>();
+        advanceList = new ArrayList<>();
         if (map == null || map.length <= 0)return;
         this.map = map;
         this.tem =  copy(map);
@@ -242,6 +243,8 @@ public class SokobanSurfaceView extends SurfaceView implements
             }
         }
         mSurfaceHolder.unlockCanvasAndPost(canvas);
+        if (backList != null && backList.size() == 0)
+            backList.add(copy(tem));
         if (goalNumber == 0){
             Toast.makeText(getContext(),"恭喜你通过了",Toast.LENGTH_LONG).show();
         }
@@ -278,7 +281,8 @@ public class SokobanSurfaceView extends SurfaceView implements
     private int personColumn = 0;
     private Rect personRect = null;
     private List<Rect> boxRectList = null;
-    private List<int[][]> temList = null;
+    private List<int[][]> backList = null;
+    private List<int[][]> advanceList = null;
 
     /**
      public final int WALL = GameStateData.DATA_FLAG.WALL;//声明墙的代号为1
@@ -291,17 +295,28 @@ public class SokobanSurfaceView extends SurfaceView implements
      */
 
 
-    public void back() {
-        if(temList == null || temList.size() == 0)return;
-        tem = temList.get(temList.size() - 1);
+    public synchronized void back() {
         if(bee_cachedThreadPool != null)
             bee_cachedThreadPool.shutdownNow();
+
+        if(backList == null || backList.size() <= 1)return;
+        tem = backList.remove(backList.size() - 2);
+        advanceList.add(copy(tem));
+
         bee_cachedThreadPool = Executors.newCachedThreadPool();
         bee_cachedThreadPool.submit(this);
     }
 
+    public void advance() {
+        if (advanceList == null || advanceList.size() <= 0)return;
+        int[][] remove = advanceList.remove(advanceList.size() - 1);
+
+    }
+
+
+
     public synchronized void up(){
-        if (tem == null || map == null || temList == null)return;
+        if (tem == null || map == null || backList == null)return;
         if (personRow <= 0)return;
         int i2 = tem[personRow - 1][personColumn];
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
@@ -356,10 +371,10 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        temList.add(tem);
+        backList.add(copy(tem));
     }
     public synchronized void below(){
-        if (tem == null || map == null || temList == null)return;
+        if (tem == null || map == null || backList == null)return;
         if (personRow >= row)return;
         int i2 = tem[personRow + 1][personColumn];
 
@@ -418,10 +433,10 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        temList.add(tem);
+        backList.add(copy(tem));
     }
     public synchronized void left(){
-        if (tem == null || map == null || temList == null)return;
+        if (tem == null || map == null || backList == null)return;
         if (personColumn == 0)return;
         int i2 = tem[personRow][personColumn - 1];
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
@@ -476,10 +491,10 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        temList.add(tem);
+        backList.add(copy(tem));
     }
     public synchronized void right(){
-        if (tem == null || map == null || temList == null)return;
+        if (tem == null || map == null || backList == null)return;
         if (personColumn >= column)return;
 
         int i2 = tem[personRow][personColumn + 1];
@@ -538,7 +553,7 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool = Executors.newCachedThreadPool();
             bee_cachedThreadPool.submit(this);
         }
-        temList.add(tem);
+        backList.add(copy(tem));
     }
 
 
@@ -597,7 +612,6 @@ public class SokobanSurfaceView extends SurfaceView implements
         }
         return true;
     }
-
 
 //    /**
 //     * 用户轻触触摸屏，由1个MotionEvent ACTION_DOWN触发
