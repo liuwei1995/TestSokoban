@@ -12,17 +12,19 @@
         <activity
             android:name="com.after.today.Act1"
             android:label="@string/app_name">
-
         </activity>
         <activity android:name="com.after.today.PushBoxMain"/>
-        <activity android:name=".GameActivity"
+        <activity
+            android:name=".GameActivity"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".EditSokobanActivity">
         </activity>
     </application>
 

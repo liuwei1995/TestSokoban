@@ -87,6 +87,14 @@
             android:textSize="18sp"
             android:layout_weight="1"
             android:text="下一关"/>
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:text="编"/>
 
     </LinearLayout>
 

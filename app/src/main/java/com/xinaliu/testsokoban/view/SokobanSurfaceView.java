@@ -10,6 +10,7 @@ import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.CallSuper;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -32,6 +33,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
+ *
  * Created by liuwei on 2017/9/11 13:23
  */
 
@@ -48,42 +50,36 @@ public class SokobanSurfaceView extends SurfaceView implements
     public final int GOAL = GameStateData.DATA_FLAG.DEST;//目标
     public final int ROAD = GameStateData.DATA_FLAG.PATH;//声明路的代号为3
     public final int BOX = GameStateData.DATA_FLAG.PATH | GameStateData.DATA_FLAG.BOX;//声明箱子的代号为4
+//    public final int BOX_AT_GOAL = GameDataStruct.DATA_FLAG.DEST | GameDataStruct.DATA_FLAG.BOX;  //位置已经放好了的
     public final int BOX_AT_GOAL = GameStateData.DATA_FLAG.MASK_MAP_AND_SPRITE;  //位置已经放好了的
     public final int WORKER = GameStateData.DATA_FLAG.PATH | GameStateData.DATA_FLAG.MP;//声明人的代号为6
     public final int NULL = GameStateData.DATA_FLAG.NULL;//声明空白区域的代号为
 
-//    public final int BACK=7;//声明返回按钮的代号为7
-//    public final int UP=8;//声明向上按钮的代号为8
-//    public final int DOWN=9;//声明向下按钮的代号为9
-//    public final int LEFT=10;//声明向左按钮的代号为10
-//    public final int RIGHT=11;//声明向右按钮的代号为11
-//    public final int MUSIC=12;//声明音乐开关的代号为1
 
     public int picSize = 30;
+    private SurfaceHolder mSurfaceHolder;
+
     public Map<Integer,Bitmap> pic = null;//声明引入的图像集
 
     public SokobanSurfaceView(Context context) {
         this(context, null);
     }
-
     public SokobanSurfaceView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
-    private SurfaceHolder mSurfaceHolder;
 
     public SokobanSurfaceView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.setFocusable(true);//设置当前view拥有触摸事件
-        width = getWidth();
-        if (width <= 0){
-            WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-            Display display = wm.getDefaultDisplay();
-            Point point = new Point();
-            display.getSize(point);
-            width = point.x > point.y ? point.y : point.x;
-        }
-        intPic();
+        bee_cachedThreadPool = Executors.newFixedThreadPool(1);
+        WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Point point = new Point();
+        display.getSize(point);
+        width = point.x > point.y ? point.y : point.x;
         getMapDetail();
+        intPic();
+
         mSurfaceHolder = getHolder();
         mSurfaceHolder.addCallback(this);
         setOnTouchListener(this);
@@ -94,9 +90,7 @@ public class SokobanSurfaceView extends SurfaceView implements
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        if(bee_cachedThreadPool != null)
-            bee_cachedThreadPool.shutdownNow();
-        bee_cachedThreadPool = Executors.newCachedThreadPool();
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())bee_cachedThreadPool = Executors.newFixedThreadPool(1);
         bee_cachedThreadPool.submit(this);
     }
 
@@ -111,6 +105,11 @@ public class SokobanSurfaceView extends SurfaceView implements
             bee_cachedThreadPool.shutdownNow();
     }
 
+    /**
+     * 拷贝数组
+     * @param srcMap 数组数据源
+     * @return int[][]
+     */
     private synchronized int[][] copy(int[][] srcMap){
         int [][] arr2 = new int[srcMap.length][srcMap[0].length];
         for (int i = 0; i < srcMap.length; i++) {
@@ -123,20 +122,29 @@ public class SokobanSurfaceView extends SurfaceView implements
 
     private int[][] map = null;
     private int[][] tem = null;
-
+    private boolean isPass = false;//是否过关
     public synchronized void start(int[][] map){
-        if(bee_cachedThreadPool != null)
-            bee_cachedThreadPool.shutdownNow();
-        tem = null;
-        boxRectList = new ArrayList<>();
-        backList = new ArrayList<>();
-        advanceList = new ArrayList<>();
         if (map == null || map.length <= 0)return;
+        tem = null;
         this.map = map;
+        isPass = false;
         this.tem =  copy(map);
+        if (boxRectList == null)
+        boxRectList = new ArrayList<>();
+        boxRectList.clear();
+
+        if (backList == null)
+        backList = new ArrayList<>();
+        backList.clear();
+
+        if (advanceList == null)
+        advanceList = new ArrayList<>();
+        advanceList.clear();
+
         getMapDetail();
         intPic();
-        bee_cachedThreadPool = Executors.newCachedThreadPool();
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
         bee_cachedThreadPool.submit(this);
     }
 
@@ -145,40 +153,44 @@ public class SokobanSurfaceView extends SurfaceView implements
     private void intPic() {
         // 初始化图片
         pic = new HashMap<>();
-        loadPic(WALL, this.getResources().getDrawable(R.drawable.wall_outside));
-        loadPic(GOAL, this.getResources().getDrawable(R.drawable.goal));
-        loadPic(ROAD, this.getResources().getDrawable(R.drawable.wall_inside));
-        loadPic(BOX, this.getResources().getDrawable(R.drawable.box));
-        loadPic(BOX_AT_GOAL,this.getResources().getDrawable(R.drawable.box_at_goal));
-        loadPic(WORKER, this.getResources().getDrawable(R.drawable.man));
-        loadPic(NULL, this.getResources().getDrawable(R.drawable.road));
-
-//        loadPic(BACK, this.getResources().getDrawable(R.drawable.back));
-//        loadPic(UP, this.getResources().getDrawable(R.drawable.up));
-//        loadPic(DOWN, this.getResources().getDrawable(R.drawable.down));
-//        loadPic(LEFT, this.getResources().getDrawable(R.drawable.left));
-//        loadPic(RIGHT, this.getResources().getDrawable(R.drawable.right));
-//        loadPic(MUSIC, this.getResources().getDrawable(R.drawable.music));
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            loadPic(WALL, this.getResources().getDrawable(R.drawable.wall_outside,null));
+            loadPic(GOAL, this.getResources().getDrawable(R.drawable.goal,null));
+            loadPic(ROAD, this.getResources().getDrawable(R.drawable.wall_inside,null));
+            loadPic(BOX, this.getResources().getDrawable(R.drawable.box,null));
+            loadPic(BOX_AT_GOAL,this.getResources().getDrawable(R.drawable.box_at_goal,null));
+            loadPic(WORKER, this.getResources().getDrawable(R.drawable.man,null));
+            loadPic(NULL, this.getResources().getDrawable(R.drawable.road,null));
+        }else {
+            loadPic(WALL, this.getResources().getDrawable(R.drawable.wall_outside));
+            loadPic(GOAL, this.getResources().getDrawable(R.drawable.goal));
+            loadPic(ROAD, this.getResources().getDrawable(R.drawable.wall_inside));
+            loadPic(BOX, this.getResources().getDrawable(R.drawable.box));
+            loadPic(BOX_AT_GOAL,this.getResources().getDrawable(R.drawable.box_at_goal));
+            loadPic(WORKER, this.getResources().getDrawable(R.drawable.man));
+            loadPic(NULL, this.getResources().getDrawable(R.drawable.road));
+        }
     }
     public int row = 0;
     public int column = 0;
-    /*
-         * public int[][] getMap(int grade) { return MapList.getMap(grade); }
-         */
 
     private void getMapDetail() {
         if (tem == null)return;
         //得到网格大小
         row = tem.length;
-        column = tem[0].length;//得到总地图的宽有几格,可以看一下MapList类,仔细想想,你就明白了
+        column = tem[0].length;//得到总地图的宽有几格
         picSize = (int) Math.floor((width - 2 * xoff) / column);//得到图片大小
     }
+
+    /***
+     * 加载图片
+     * @param KEY k
+     * @param dw d
+     */
     private void loadPic(int KEY, Drawable dw) {
         try {
             // 构造Bitmap
-            Bitmap bm = Bitmap.createBitmap(picSize, picSize,
-                    Bitmap.Config.ARGB_8888);
+            Bitmap bm = Bitmap.createBitmap(picSize, picSize,Bitmap.Config.ARGB_8888);
             dw.setBounds(0, 0, picSize, picSize);
             Canvas cs = new Canvas(bm);
             dw.draw(cs);
@@ -198,9 +210,8 @@ public class SokobanSurfaceView extends SurfaceView implements
 
     @Override
     public void run() {
-        if (tem == null || boxRectList == null)return;
+        if (tem == null || boxRectList == null || isPass)return;
         boxRectList.clear();
-// 画笔
         //1.这里就是核心了， 得到画布 ，然后在你的画布上画出要显示的内容
         Canvas canvas =  mSurfaceHolder.lockCanvas();
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);//清空画布
@@ -232,6 +243,7 @@ public class SokobanSurfaceView extends SurfaceView implements
                             int left = xoff + j * picSize;
                             int top = yoff+ i * picSize;
                             boxRectList.add(new Rect(left, top, left + picSize, top + picSize));
+                            if (i1 == BOX)  ++goalNumber;
                         }else if (i1 == GOAL){
                             ++goalNumber;
                         }
@@ -244,7 +256,18 @@ public class SokobanSurfaceView extends SurfaceView implements
         mSurfaceHolder.unlockCanvasAndPost(canvas);
 
         if (goalNumber == 0){
-            Toast.makeText(getContext(),"恭喜你通过了",Toast.LENGTH_LONG).show();
+            isPass = true;
+            this.post(new Runnable() {
+                @Override
+                public void run() {
+                    if (mPassCallback != null){
+                        backList.add(tem);
+                        mPassCallback.onCallback(map,backList);
+                    }else {
+                        Toast.makeText(getContext(),"恭喜你通过了",Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
         }
     }
 
@@ -261,8 +284,7 @@ public class SokobanSurfaceView extends SurfaceView implements
      *
      * @return      null
      */
-    public static Rect drawImage(Canvas canvas, Bitmap blt, int x, int y,
-                                 int w, int h) {
+    public static Rect drawImage(Canvas canvas, Bitmap blt, int x, int y,int w, int h) {
 //       Rect src = new Rect();// 图片 >>原矩形
         Rect dst = new Rect();// 屏幕 >>目标矩形
         dst.left = x;
@@ -275,49 +297,49 @@ public class SokobanSurfaceView extends SurfaceView implements
         return dst;
     }
 
-    private int personRow = 0;
-    private int personColumn = 0;
-    private Rect personRect = null;
-    private List<Rect> boxRectList = null;
-    private List<int[][]> backList = null;
-    private List<int[][]> advanceList = null;
+    private int personRow = 0;//当前人的行
+    private int personColumn = 0;//当前人的列
+    private Rect personRect = null;//人的位置
+    private List<Rect> boxRectList = null;//箱子的位置集合
+    private List<int[][]> backList = null;//回退集合
+    private List<int[][]> advanceList = null;//前进集合
 
     /**
-     public final int WALL = GameStateData.DATA_FLAG.WALL;//声明墙的代号为1
-     public final int GOAL = GameStateData.DATA_FLAG.DEST;//目标
-     public final int ROAD = GameStateData.DATA_FLAG.PATH;//声明路的代号为3
-     public final int BOX = GameStateData.DATA_FLAG.PATH | GameStateData.DATA_FLAG.BOX;//声明箱子的代号为4
-     public final int BOX_AT_GOAL = GameStateData.DATA_FLAG.MASK_MAP_AND_SPRITE;//位置已经放好了的
-     public final int WORKER = GameStateData.DATA_FLAG.PATH | GameStateData.DATA_FLAG.MP;//声明人的代号为6
-     public final int NULL = GameStateData.DATA_FLAG.NULL;//声明空白区域的代号为
+     * 回退
      */
-
-
     public synchronized void back() {
-        if(bee_cachedThreadPool != null)
-            bee_cachedThreadPool.shutdownNow();
 
-        if(backList == null || backList.size() <= 0)return;
-        backList.remove(backList.size() - 1);
-        tem = backList.get(backList.size() - 1);
-        advanceList.add(copy(tem));
+        if(backList == null || backList.size() <= 0 || isPass)return;
+        advanceList.add(copy(tem));//前进集合
 
-        bee_cachedThreadPool = Executors.newCachedThreadPool();
+        tem =  backList.remove(backList.size() - 1);
+
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
         bee_cachedThreadPool.submit(this);
     }
 
-    public void advance() {
-        if (advanceList == null || advanceList.size() <= 0)return;
-        int[][] remove = advanceList.remove(advanceList.size() - 1);
+    /**
+     * 前进
+     */
+    public synchronized void advance() {
+        if (advanceList == null || advanceList.size() <= 0 || isPass)return;
+        backList.add(copy(tem));//回退集合
 
+        tem = advanceList.remove(advanceList.size() - 1);
+
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
+        bee_cachedThreadPool.submit(this);
     }
 
-
-
     public synchronized void up(){
-        if (tem == null || map == null || backList == null)return;
+        if (tem == null || map == null || backList == null || isPass)return;
         if (personRow <= 0)return;
+        if (advanceList != null)advanceList.clear();//把前进的集合清空
+
         backList.add(copy(tem));
+
         int i2 = tem[personRow - 1][personColumn];
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
             return;
@@ -325,15 +347,11 @@ public class SokobanSurfaceView extends SurfaceView implements
         if (i2 == ROAD || i2 == GOAL){//路 || 目标
             tem[personRow - 1][personColumn] = WORKER;
             int i = map[personRow][personColumn];
-            if (i == GOAL){//目标
+            if (i == GOAL || i == BOX_AT_GOAL){//目标
                 tem[personRow][personColumn] = GOAL;
             }else if (i == ROAD || i == WORKER || i == BOX){//路
                 tem[personRow][personColumn] = ROAD;
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }else if (i2 == BOX || i2 == BOX_AT_GOAL){// 箱子 || 位置已经放好了的
             if (personRow <= 1)return;
             int i = tem[personRow - 2][personColumn];
@@ -345,7 +363,7 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow - 1][personColumn] = WORKER;//人
 
                 int ij = map[personRow][personColumn];
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
@@ -355,7 +373,7 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow - 1][personColumn] = WORKER;//人
 
                 int ij = map[personRow][personColumn];
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
@@ -366,15 +384,18 @@ public class SokobanSurfaceView extends SurfaceView implements
                 Log.d("--------","---------------------");
                 return;
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }
+
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
+
+        bee_cachedThreadPool.submit(this);
     }
     public synchronized void below(){
-        if (tem == null || map == null || backList == null)return;
+        if (tem == null || map == null || backList == null || isPass)return;
         if (personRow >= row)return;
+        if (advanceList != null)advanceList.clear();//把前进的集合清空
+
         backList.add(copy(tem));
         int i2 = tem[personRow + 1][personColumn];
 
@@ -386,16 +407,12 @@ public class SokobanSurfaceView extends SurfaceView implements
             tem[personRow + 1][personColumn] = WORKER;
             int i = map[personRow][personColumn];
 
-            if (i == GOAL){//目标
+            if (i == GOAL || i == BOX_AT_GOAL){//目标
                 tem[personRow][personColumn] = GOAL;
             }else if (i == ROAD || i == WORKER || i == BOX){//路
                 tem[personRow][personColumn] = ROAD;
             }
             personRow =  personRow + 1;
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }else if (i2 == BOX || i2 == BOX_AT_GOAL){// 箱子 || 位置已经放好了的
             if (personRow >= row + 1)return;
             int i = tem[personRow + 2][personColumn];
@@ -407,7 +424,7 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow + 1][personColumn] = WORKER;//人
                 int ij = map[personRow][personColumn];
 
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路 || 人 || 箱子
                     tem[personRow][personColumn] = ROAD;
@@ -417,26 +434,29 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow + 1][personColumn] = WORKER;//人
                 int ij = map[personRow][personColumn];
 
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
                 }else {
                     Log.d("--------","---------------------");
+                    return;
                 }
             } else {
                 Log.d("--------","---------------------");
                 return;
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }
+
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
+        bee_cachedThreadPool.submit(this);
     }
     public synchronized void left(){
-        if (tem == null || map == null || backList == null)return;
+        if (tem == null || map == null || backList == null || isPass)return;
         if (personColumn == 0)return;
+        if (advanceList != null)advanceList.clear();//把前进的集合清空
+
         backList.add(copy(tem));
         int i2 = tem[personRow][personColumn - 1];
         if (i2 == WALL || i2 == NULL){//墙 || 空白区域
@@ -445,15 +465,13 @@ public class SokobanSurfaceView extends SurfaceView implements
         if (i2 == ROAD || i2 == GOAL){//路 || 目标
             tem[personRow][personColumn - 1] = WORKER;
             int i = map[personRow][personColumn];
-            if (i == GOAL){//目标
+            if (i == GOAL || i == BOX_AT_GOAL){//目标
                 tem[personRow][personColumn] = GOAL;
             }else if (i == ROAD || i == WORKER || i == BOX){//路
                 tem[personRow][personColumn] = ROAD;
+            }else {
+                Toast.makeText(getContext(),"错误",Toast.LENGTH_LONG).show();
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }else if (i2 == BOX || i2 == BOX_AT_GOAL){// 箱子 || 位置已经放好了的
             if (personColumn <= 1)return;
             int i = tem[personRow][personColumn - 2];
@@ -464,37 +482,42 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow][personColumn - 2] = BOX;//箱子
                 tem[personRow][personColumn - 1] = WORKER;//人
 
-                int ij = tem[personRow][personColumn];
-                if (ij == GOAL){//目标
+                int ij = map[personRow][personColumn];
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
-                }
+                }else  Toast.makeText(getContext(),"错误",Toast.LENGTH_LONG).show();
             }else if (i == GOAL){//  目标
                 tem[personRow][personColumn - 2] = BOX_AT_GOAL;// 位置已经放好了的
                 tem[personRow][personColumn - 1] = WORKER;//人
 
                 int ij = map[personRow][personColumn];
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
                 }else {
+                    Toast.makeText(getContext(),"错误",Toast.LENGTH_LONG).show();
                     Log.d("--------","---------------------");
+                    return;
                 }
             } else {
+                Toast.makeText(getContext(),"错误",Toast.LENGTH_LONG).show();
                 Log.d("--------","---------------------");
                 return;
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }
+
+        if (bee_cachedThreadPool == null || bee_cachedThreadPool.isShutdown())
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
+        bee_cachedThreadPool.submit(this);
     }
     public synchronized void right(){
-        if (tem == null || map == null || backList == null)return;
+        if (tem == null || map == null || backList == null || isPass)return;
         if (personColumn >= column)return;
+        if (advanceList != null)advanceList.clear();//把前进的集合清空
+
         backList.add(copy(tem));
         int i2 = tem[personRow][personColumn + 1];
 
@@ -506,15 +529,11 @@ public class SokobanSurfaceView extends SurfaceView implements
             tem[personRow][personColumn + 1] = WORKER;
 
             int i = map[personRow][personColumn];
-            if (i == GOAL){//目标
+            if (i == GOAL || i == BOX_AT_GOAL){//目标
                 tem[personRow][personColumn] = GOAL;
             }else if (i == ROAD || i == WORKER || i == BOX){//路
                 tem[personRow][personColumn] = ROAD;
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }else if (i2 == BOX || i2 == BOX_AT_GOAL){// 箱子 || 位置已经放好了的
             if (personColumn >= column + 1)return;
             int i = tem[personRow][personColumn + 2];
@@ -526,7 +545,7 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow][personColumn + 1] = WORKER;//人
 
                 int ij = map[personRow][personColumn];
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
@@ -536,23 +555,26 @@ public class SokobanSurfaceView extends SurfaceView implements
                 tem[personRow][personColumn + 1] = WORKER;//人
 
                 int ij = map[personRow][personColumn];
-                if (ij == GOAL){//目标
+                if (ij == GOAL || ij == BOX_AT_GOAL){//目标
                     tem[personRow][personColumn] = GOAL;
                 }else if (ij == ROAD || ij == WORKER || ij == BOX){//路
                     tem[personRow][personColumn] = ROAD;
                 }else {
                     Log.d("--------","---------------------");
+                    return;
                 }
             } else {
                 Log.d("--------","---------------------");
                 return;
             }
-            if(bee_cachedThreadPool != null)
-                bee_cachedThreadPool.shutdownNow();
-            bee_cachedThreadPool = Executors.newCachedThreadPool();
-            bee_cachedThreadPool.submit(this);
         }
+
+        if(bee_cachedThreadPool == null)
+            bee_cachedThreadPool = Executors.newFixedThreadPool(1);
+        bee_cachedThreadPool.submit(this);
     }
+
+    private Map<Integer,Integer> mapwei = new HashMap<>();
 
 
     private float y1;
@@ -611,66 +633,23 @@ public class SokobanSurfaceView extends SurfaceView implements
         return true;
     }
 
-//    /**
-//     * 用户轻触触摸屏，由1个MotionEvent ACTION_DOWN触发
-//     * @param e e
-//     * @return f
-//     */
-//    @Override
-//    public boolean onDown(MotionEvent e) {
-//        return false;
-//    }
-//    /*
-//        * 用户轻触触摸屏，尚未松开或拖动，由一个1个MotionEvent ACTION_DOWN触发
-//        * 注意和onDown()的区别，强调的是没有松开或者拖动的状态
-//        */
-//    @Override
-//    public void onShowPress(MotionEvent e) {
-//
-//    }
-//
-//    /**
-//     * 用户（轻触触摸屏后）松开，由一个1个MotionEvent ACTION_UP触发
-//     * @param e e
-//     * @return f
-//     */
-//    @Override
-//    public boolean onSingleTapUp(MotionEvent e) {
-//        return false;
-//    }
-//
-//    /**
-//     * 用户按下触摸屏，并拖动，由1个MotionEvent ACTION_DOWN, 多个ACTION_MOVE触发
-//     * @param e1 e
-//     * @param e2 e
-//     * @param distanceX x
-//     * @param distanceY y
-//     * @return f
-//     */
-//    @Override
-//    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-//        return false;
-//    }
-//
-//    /**
-//     * 用户长按触摸屏，由多个MotionEvent ACTION_DOWN触发
-//     * @param e e
-//     */
-//    @Override
-//    public void onLongPress(MotionEvent e) {
-//        Toast.makeText(getContext(),"onLongPress",Toast.LENGTH_LONG).show();
-//    }
-//
-//    /**
-//     * 用户按下触摸屏、快速移动后松开，由1个MotionEvent ACTION_DOWN, 多个ACTION_MOVE, 1个ACTION_UP触发
-//     * @param e1 e
-//     * @param e2 e
-//     * @param velocityX x
-//     * @param velocityY y
-//     * @return f
-//     */
-//    @Override
-//    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//        return false;
-//    }
+    private PassCallback mPassCallback;
+    /**
+     * 通关回调
+     */
+    public void setPassCallback(PassCallback mPassCallback) {
+        this.mPassCallback = mPassCallback;
+    }
+
+    public interface PassCallback{
+
+        /**
+         * <p>通关回调</p>
+         * @param map 地图
+         * @param stepList 步骤
+         */
+        void onCallback(int[][] map, List<int[][]> stepList);
+
+    }
+
 }

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xinaliu.testsokoban.EditSokobanActivity">
+
+    <com.xinaliu.testsokoban.view.EditSokobanSurfaceView
+        android:id="@+id/essv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_b"
+        >
+
+    </com.xinaliu.testsokoban.view.EditSokobanSurfaceView>
+
+    <LinearLayout
+        android:id="@+id/ll_b"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_heightPercent="12%">
+
+        <ImageView
+            android:id="@+id/person"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@drawable/man2"/>
+
+        <ImageView
+            android:id="@+id/wall"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@drawable/wall_outside"/>
+
+        <ImageView
+            android:id="@+id/road"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@drawable/wall_inside"/>
+
+        <ImageView
+            android:id="@+id/box"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@drawable/box"/>
+
+        <ImageView
+            android:id="@+id/goal"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@drawable/goal"/>
+
+        <ImageView
+            android:id="@+id/finish"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@drawable/box_at_goal"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/person"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/et_b_background"-->
+            <!--android:padding="5dp"-->
+            <!--android:src="@drawable/man2"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/wall"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/et_b_background"-->
+            <!--android:src="@drawable/wall_outside"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/road"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/et_b_background"-->
+            <!--android:src="@drawable/wall_inside"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/box"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/et_b_background"-->
+            <!--android:src="@drawable/box"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/goal"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/et_b_background"-->
+            <!--android:src="@drawable/goal"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/finish"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/et_b_background"-->
+            <!--android:src="@drawable/box_at_goal"/>-->
+        <!--<RadioGroup-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:drawableRight="@drawable/man2"/>-->
+
+        <!---->
+
+        <!--</RadioGroup>-->
+    </LinearLayout>
+</android.support.percent.PercentRelativeLayout>

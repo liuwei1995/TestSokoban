@@ -1,15 +1,17 @@
 package com.xinaliu.testsokoban;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Toast;
 
 import com.xinaliu.testsokoban.view.SokobanSurfaceView;
 
-public class GameActivity extends AppCompatActivity implements SurfaceHolder.Callback, View.OnClickListener {
+import java.util.List;
+
+public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private SurfaceView mSvGame;
 
@@ -31,26 +33,18 @@ public class GameActivity extends AppCompatActivity implements SurfaceHolder.Cal
         findViewById(R.id.right).setOnClickListener(this);
         findViewById(R.id.next_level).setOnClickListener(this);
         findViewById(R.id.advance).setOnClickListener(this);
+        findViewById(R.id.edit).setOnClickListener(this);
         mSokobanSurfaceView = (SokobanSurfaceView) findViewById(R.id.sv_game2);
-//        SurfaceHolder holder = mSvGame.getHolder();
-//        holder.addCallback(this);
-        mSokobanSurfaceView.start(GameStateData.gameStateDataArray[p]);
+        mSokobanSurfaceView.setPassCallback(new SokobanSurfaceView.PassCallback() {
+            @Override
+            public void onCallback(int[][] map, List<int[][]> stepList) {
+                Toast.makeText(GameActivity.this,"恭喜你通过了",Toast.LENGTH_LONG).show();
+                findViewById(R.id.next_level).performClick();
+            }
+        });
+        mSokobanSurfaceView.start(GameStateDataProvider.getGameStateData(p));
     }
 
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-
-    }
-
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-
-    }
 
     @Override
     protected void onDestroy() {
@@ -75,15 +69,20 @@ public class GameActivity extends AppCompatActivity implements SurfaceHolder.Cal
             mSokobanSurfaceView.right();
         }
         else if (id == R.id.next_level){
+            GameDataStruct gameDataStruct = new GameDataStruct(GameStateDataProvider.getGameStateData(p), true);
+            int checkData = gameDataStruct.checkData();
+            Toast.makeText(GameActivity.this,"checkData\t"+checkData,Toast.LENGTH_LONG).show();
+
             ++p;
-            if (GameStateData.gameStateDataArray.length == p){
+            if (GameStateDataProvider.getGameStateToltalNumer() <= p){
                 p = 0;
             }
-            mSokobanSurfaceView.start(GameStateData.gameStateDataArray[p]);
+            mSokobanSurfaceView.start(GameStateDataProvider.getGameStateData(p));
         }
         else if (id == R.id.advance){
             mSokobanSurfaceView.advance();
-            Toast.makeText(this,"努力建设中",Toast.LENGTH_LONG).show();
+        }else {
+            startActivity(new Intent(this,EditSokobanActivity.class));
         }
     }
 }
