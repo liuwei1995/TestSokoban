@@ -181,6 +181,25 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
         }else if(event.getAction() == MotionEvent.ACTION_MOVE) {
             float x1 = event.getX();
             float y1 = event.getY();
+            if (paintType == WORKER){
+                PositionEntity entity = null;
+                for (PositionEntity positionEntity : list) {
+                    boolean contains = positionEntity.getRect().contains((int)x1, (int)y1);
+                    if (entity == null){
+                        if (contains){
+                            entity = positionEntity;
+                        }
+                    }
+                    int type = positionEntity.getType();
+                    if (type == WORKER){
+                        positionEntity.setType(NULL);
+                    }
+                }
+                if (entity != null){
+                    entity.setType(WORKER);
+                }
+                bee_cachedThreadPool.submit(this);
+            }else
             for (PositionEntity positionEntity : list) {
                 boolean contains = positionEntity.getRect().contains((int)x1, (int)y1);
                 if (contains){
@@ -241,7 +260,25 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
             if (type == 0){
                 canvas.drawRect(positionEntity.getRect(),paint);
             }else if (type == WALL){
-                canvas.drawBitmap(pic.get(WALL),null,positionEntity.getRect(), paint);
+                canvas.drawBitmap(pic.get(type),null,positionEntity.getRect(), paint);
+            }
+            else if (type == WORKER){
+                canvas.drawBitmap(pic.get(type),null,positionEntity.getRect(), paint);
+            }
+            else if (type == ROAD){
+                canvas.drawBitmap(pic.get(type),null,positionEntity.getRect(), paint);
+            }
+            else if (type == BOX){
+                canvas.drawBitmap(pic.get(type),null,positionEntity.getRect(), paint);
+            }
+            else if (type == GOAL){
+                canvas.drawBitmap(pic.get(type),null,positionEntity.getRect(), paint);
+            }else {
+                try {
+                    canvas.drawBitmap(pic.get(type),null,positionEntity.getRect(), paint);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         mSurfaceHolder.unlockCanvasAndPost(canvas);
@@ -249,4 +286,7 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
 
     private int paintType = WALL;
 
+    public void setPaintType(int paintType) {
+        this.paintType = paintType;
+    }
 }

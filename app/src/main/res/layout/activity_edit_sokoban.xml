@@ -54,6 +54,12 @@
             android:id="@+id/finish"
             style="@style/activity_edit_sokoban_imageview"
             android:src="@drawable/box_at_goal"/>
+
+        <ImageView
+            android:id="@+id/clear"
+            style="@style/activity_edit_sokoban_imageview"
+            android:src="@mipmap/ic_clear_01"/>
+
         <!--<ImageView-->
             <!--android:id="@+id/person"-->
             <!--android:layout_width="0dp"-->

@@ -69,21 +69,31 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId()) {
             case R.id.person:
                 Toast.makeText(this,"点击了 人",Toast.LENGTH_LONG).show();
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.WORKER);
                 break;
             case R.id.wall:
                 Toast.makeText(this,"点击了 墙",Toast.LENGTH_LONG).show();
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.WALL);
                 break;
             case R.id.road:
                 Toast.makeText(this,"点击了 墙",Toast.LENGTH_LONG).show();
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.ROAD);
                 break;
             case R.id.box:
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.BOX);
                 Toast.makeText(this,"点击了 箱子",Toast.LENGTH_LONG).show();
                 break;
             case R.id.goal:
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.GOAL);
                 Toast.makeText(this,"点击了 目标",Toast.LENGTH_LONG).show();
                 break;
             case R.id.finish:
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.BOX_AT_GOAL);
                 Toast.makeText(this,"点击了 完成",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.clear:
+                mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.NULL);
+                Toast.makeText(this,"点击了 清理",Toast.LENGTH_LONG).show();
                 break;
         }
     }
