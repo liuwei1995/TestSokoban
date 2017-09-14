@@ -235,7 +235,7 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
         paint.setTextSize(20f);
         paint.setColor(Color.WHITE);
 
-        canvas.drawText("第"+String.valueOf(1)+"关", 2*width/5,yoff/2 , paint);
+//        canvas.drawText("第"+String.valueOf(1)+"关", 2*width/5,yoff/2 , paint);
 
 
         paint.setStrokeWidth(1);

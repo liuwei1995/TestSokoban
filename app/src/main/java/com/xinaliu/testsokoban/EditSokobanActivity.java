@@ -20,6 +20,8 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
     private ImageView mBox;
     private ImageView mGoal;
     private ImageView mFinish;
+    private ImageView mClear;
+    private ImageView mSelector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
         initView();
         mEditSokobanSurfaceView = (EditSokobanSurfaceView) findViewById(R.id.essv);
     }
+
     private List<ImageView> list = new ArrayList<>();
 
     private void initView() {
@@ -55,46 +58,53 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
         mFinish.setOnClickListener(this);
         list.add(mFinish);
 
+
+        mClear = (ImageView) findViewById(R.id.clear);
+        mClear.setOnClickListener(this);
+        list.add(mClear);
+        mSelector = (ImageView) findViewById(R.id.selector);
     }
 
     @Override
     public void onClick(View v) {
-        for (ImageView imageView : list) {
-            if (v == imageView){
-                imageView.setSelected(true);
-            }else {
-                imageView.setSelected(false);
-            }
-        }
+        int resId = R.drawable.wall_outside;
         switch (v.getId()) {
             case R.id.person:
-                Toast.makeText(this,"点击了 人",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 人", Toast.LENGTH_LONG).show();
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.WORKER);
+                resId = R.drawable.man;
                 break;
             case R.id.wall:
-                Toast.makeText(this,"点击了 墙",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 墙", Toast.LENGTH_LONG).show();
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.WALL);
+                resId = R.drawable.wall_outside;
                 break;
             case R.id.road:
-                Toast.makeText(this,"点击了 墙",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 路", Toast.LENGTH_LONG).show();
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.ROAD);
+                resId = R.drawable.wall_inside;
                 break;
             case R.id.box:
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.BOX);
-                Toast.makeText(this,"点击了 箱子",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 箱子", Toast.LENGTH_LONG).show();
+                resId = R.drawable.box;
                 break;
             case R.id.goal:
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.GOAL);
-                Toast.makeText(this,"点击了 目标",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 目标", Toast.LENGTH_LONG).show();
+                resId = R.drawable.goal;
                 break;
             case R.id.finish:
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.BOX_AT_GOAL);
-                Toast.makeText(this,"点击了 完成",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 完成", Toast.LENGTH_LONG).show();
+                resId = R.drawable.box_at_goal;
                 break;
             case R.id.clear:
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.NULL);
-                Toast.makeText(this,"点击了 清理",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 清理", Toast.LENGTH_LONG).show();
+                resId = R.drawable.ic_clear_01;
                 break;
         }
+        mSelector.setImageResource(resId);
     }
 }
