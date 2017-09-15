@@ -25,3499 +25,3495 @@ public class GameStateDataProvider {
         newInstance();
         return gameDataArray.length;
     }
-    private static int[][][] gameDataArray;
-
-
-    private GameStateDataProvider() {
-        gameDataArray = new int[][][]
-                {
-                        //-----------------------------------------------------------
-                        //state 1
-                        {
+    private static int[][][] gameDataArray= new int[][][]
+            {
+                    //-----------------------------------------------------------
+                    //state 1
+                    {
 		   /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		   /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		   /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		   /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		   /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		   /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		   /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		   /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 2
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 2
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 3
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 3
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 4
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 4
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 5
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 5
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 6
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 6
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 7
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 7
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 8
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 8
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 9
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 9
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 10
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 10
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 11
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 11
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 12
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 12
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 13
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 13
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 14
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 14
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 15
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 15
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 16
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 16
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 17
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 17
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 18
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 18
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 19
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 19
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 20
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 20
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 21
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 21
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 22
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 22
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 23
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 23
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 24
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 24
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 25
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 25
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 26
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 26
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 27
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 27
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 28
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 28
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 8 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 9 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.MASK_MAP_AND_SPRITE,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 29
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 29
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                }
-                        },
-                        //-----------------------------------------------------------
-                        //state 30
-                        {
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            }
+                    },
+                    //-----------------------------------------------------------
+                    //state 30
+                    {
 		    /* 1 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 2 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 3 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 4 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.MP,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL
+                            },
 		    /* 5 */
-                                {
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH | GameDataStruct.DATA_FLAG.BOX,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 6 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.DEST,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.PATH,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                },
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.DEST,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.PATH,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            },
 		    /* 7 */
-                                {
-                                        GameDataStruct.DATA_FLAG.NULL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.WALL,
-                                        GameDataStruct.DATA_FLAG.NULL
-                                }
-                        }
+                            {
+                                    GameDataStruct.DATA_FLAG.NULL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.WALL,
+                                    GameDataStruct.DATA_FLAG.NULL
+                            }
+                    }
 //                        ,
 //                        //-----------------------------------------------------------
 //                        //state 31
@@ -15732,7 +15728,10 @@ public class GameStateDataProvider {
 //                                        GameDataStruct.DATA_FLAG.WALL
 //                                }
 //                        }
-                };
+            };
+
+
+    private GameStateDataProvider() {
     }
 
 
