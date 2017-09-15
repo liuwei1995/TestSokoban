@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xinaliu.testsokoban.view.EditSokobanSurfaceView;
@@ -22,6 +23,10 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
     private ImageView mFinish;
     private ImageView mClear;
     private ImageView mSelector;
+    /**
+     * 保存
+     */
+    private TextView mSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +67,11 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
         mClear = (ImageView) findViewById(R.id.clear);
         mClear.setOnClickListener(this);
         list.add(mClear);
+
         mSelector = (ImageView) findViewById(R.id.selector);
+
+        mSave = (TextView) findViewById(R.id.save);
+        mSave.setOnClickListener(this);
     }
 
     @Override
@@ -103,6 +112,14 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.NULL);
                 Toast.makeText(this, "点击了 清理", Toast.LENGTH_LONG).show();
                 resId = R.drawable.ic_clear_01;
+                break;
+            case R.id.save:
+                int[][] gameData = mEditSokobanSurfaceView.getGameData();
+                GameDataStruct gameDataStruct = new GameDataStruct(gameData, false);
+                int i = gameDataStruct.checkData();
+//                GraphByMatrix graphByMatrix = new GraphByMatrix(false, true, gameData.length);
+//                graphByMatrix.shortestPath_FLOYD(gameData);
+                Toast.makeText(this, "点击了 保存=\t"+i, Toast.LENGTH_LONG).show();
                 break;
         }
         mSelector.setImageResource(resId);

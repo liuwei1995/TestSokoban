@@ -12,6 +12,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -75,8 +76,12 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
         setOnTouchListener(this);
         getMapDetail();
         intPic();
+        setRectLayoutSize();
     }
 
+    private void setRectLayoutSize(){
+        mRectLayoutSize = new Rect(xoff, yoff, xoff + column * picSize, yoff + row * picSize);
+    }
     @SuppressLint("UseSparseArrays")
     private void intPic() {
         // 初始化图片
@@ -117,12 +122,17 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
             e.printStackTrace();
         }
     }
-    public int row = 15;
+    public int row = 13;
     private int column = 13;
+//    public int row = 15;
+//    private int column = 13;
 
     private int picSize = 30;
+    private Rect mRectLayoutSize;//布局大小
+
     private void getMapDetail() {
         picSize = (int) Math.floor((width - 2 * xoff) / column);//得到图片大小
+        setRectLayoutSize();
     }
 
     @Override
@@ -179,8 +189,13 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
                 }
             }
         }else if(event.getAction() == MotionEvent.ACTION_MOVE) {
+
             float x1 = event.getX();
             float y1 = event.getY();
+            if (!mRectLayoutSize.contains((int)x1,(int)y1)){
+                Log.d("==","=====================");
+                return true;
+            }
             if (paintType == WORKER){
                 PositionEntity entity = null;
                 for (PositionEntity positionEntity : list) {
@@ -288,5 +303,30 @@ public class EditSokobanSurfaceView  extends SurfaceView implements
 
     public void setPaintType(int paintType) {
         this.paintType = paintType;
+    }
+
+    public int[][] getGameData(){
+        Map<Integer,List<PositionEntity>> map = new HashMap<>();
+
+        for (PositionEntity positionEntity : list) {
+            List<PositionEntity> positionEntities = map.get(positionEntity.getX());
+            if (positionEntities == null){
+                positionEntities = new ArrayList<>();
+                map.put(positionEntity.getX(),positionEntities);
+            }
+            positionEntities.add(positionEntity);
+        }
+        int[][] ints = null;
+        for (Integer integer : map.keySet()) {
+            List<PositionEntity> positionEntities = map.get(integer);
+            if (ints == null){
+                ints = new int[map.size()][positionEntities.size()];
+            }
+            for (int i = 0; i < positionEntities.size(); i++) {
+                PositionEntity positionEntity = positionEntities.get(i);
+                ints[integer][positionEntity.getY()] = positionEntity.getType();
+            }
+        }
+        return ints;
     }
 }

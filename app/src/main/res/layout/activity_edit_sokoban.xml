@@ -7,47 +7,81 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.xinaliu.testsokoban.EditSokobanActivity">
-    <android.support.v7.widget.Toolbar
+
+    <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary">
+        android:background="?attr/colorPrimary"
+        >
+
         <ImageView
             android:layout_width="wrap_content"
-            android:src="@mipmap/ic_light_actionbar_back"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_light_actionbar_back"/>
         <!--selector-->
         <ImageView
             android:id="@+id/selector"
             android:layout_width="wrap_content"
-            android:src="@drawable/box"
-            android:layout_height="wrap_content"/>
-        <!--<TextView-->
-            <!--android:id="@+id/title"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:gravity="center"-->
-            <!--android:text="@string/app_name"-->
-            <!--android:textStyle="bold"-->
-            <!--/>-->
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/wall_outside"/>
+
         <TextView
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:gravity="center_vertical"
             android:text="保存"
-            app:layout_marginLeft="10dp"
             android:textStyle="bold"
-            android:layout_alignTop="@+id/title"/>
-    </android.support.v7.widget.Toolbar>
+            />
+    </LinearLayout>
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="?attr/colorPrimary">-->
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@mipmap/ic_light_actionbar_back"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;selector&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/selector"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/box"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<TextView&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:id="@+id/title"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:gravity="center"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:text="@string/app_name"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:textStyle="bold"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/save"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="保存"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignTop="@+id/title"/>&ndash;&gt;-->
+    <!--</android.support.v7.widget.Toolbar>-->
     <com.xinaliu.testsokoban.view.EditSokobanSurfaceView
         android:id="@+id/essv"
-        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/ll_b"
+        android:layout_below="@+id/toolbar"
         >
 
     </com.xinaliu.testsokoban.view.EditSokobanSurfaceView>
@@ -96,59 +130,59 @@
             android:src="@mipmap/ic_clear_01"/>
 
         <!--<ImageView-->
-            <!--android:id="@+id/person"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_margin="1dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/et_b_background"-->
-            <!--android:padding="5dp"-->
-            <!--android:src="@drawable/man2"/>-->
+        <!--android:id="@+id/person"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/et_b_background"-->
+        <!--android:padding="5dp"-->
+        <!--android:src="@drawable/man2"/>-->
 
         <!--<ImageView-->
-            <!--android:id="@+id/wall"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_margin="1dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/et_b_background"-->
-            <!--android:src="@drawable/wall_outside"/>-->
+        <!--android:id="@+id/wall"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/et_b_background"-->
+        <!--android:src="@drawable/wall_outside"/>-->
 
         <!--<ImageView-->
-            <!--android:id="@+id/road"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_margin="1dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/et_b_background"-->
-            <!--android:src="@drawable/wall_inside"/>-->
+        <!--android:id="@+id/road"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/et_b_background"-->
+        <!--android:src="@drawable/wall_inside"/>-->
 
         <!--<ImageView-->
-            <!--android:id="@+id/box"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_margin="1dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/et_b_background"-->
-            <!--android:src="@drawable/box"/>-->
+        <!--android:id="@+id/box"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/et_b_background"-->
+        <!--android:src="@drawable/box"/>-->
 
         <!--<ImageView-->
-            <!--android:id="@+id/goal"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_margin="1dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/et_b_background"-->
-            <!--android:src="@drawable/goal"/>-->
+        <!--android:id="@+id/goal"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/et_b_background"-->
+        <!--android:src="@drawable/goal"/>-->
 
         <!--<ImageView-->
-            <!--android:id="@+id/finish"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_margin="1dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/et_b_background"-->
-            <!--android:src="@drawable/box_at_goal"/>-->
+        <!--android:id="@+id/finish"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/et_b_background"-->
+        <!--android:src="@drawable/box_at_goal"/>-->
         <!--<RadioGroup-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->

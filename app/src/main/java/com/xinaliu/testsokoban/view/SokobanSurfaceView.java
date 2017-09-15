@@ -23,6 +23,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.xinaliu.testsokoban.GameStateData;
+import com.xinaliu.testsokoban.PositionEntity;
 import com.xinaliu.testsokoban.R;
 
 import java.util.ArrayList;
@@ -207,11 +208,13 @@ public class SokobanSurfaceView extends SurfaceView implements
         getHolder().getSurface().release();
     }
 
+    private List<PositionEntity> listPositionEntity = new ArrayList<>();
 
     @Override
     public void run() {
         if (tem == null || boxRectList == null || isPass)return;
         boxRectList.clear();
+        listPositionEntity.clear();
         //1.这里就是核心了， 得到画布 ，然后在你的画布上画出要显示的内容
         Canvas canvas =  mSurfaceHolder.lockCanvas();
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);//清空画布
@@ -220,33 +223,40 @@ public class SokobanSurfaceView extends SurfaceView implements
         Paint paint = new Paint();
         paint.setTextSize(20f);
         paint.setColor(Color.WHITE);
-//        try {
-//            canvas.drawText("第"+String.valueOf(1)+"关", 2*width/5,yoff/2 , paint);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         int goalNumber = 0;
         //绘制地图
         for (int i = 0; i < row; i++){
             for (int j = 0; j < column; j++) {
                 int i1 = tem[i][j];
                 try {
+                    int left = xoff + j * picSize;
+                    int top = yoff+ i * picSize;
                     if (i1 > 0){//临时
+                        listPositionEntity.add(new PositionEntity(new Rect(left, top, left + picSize, top + picSize),i1,j,i));
                         canvas.drawBitmap(pic.get(i1), xoff + j * picSize, yoff+ i * picSize, paint);
                         if (i1 == WORKER){//工人
                             personRow = i;
                             personColumn = j;
-                            int left = xoff + j * picSize;
-                            int top = yoff+ i * picSize;
-                            personRect = new Rect(left, top, left + picSize, top + picSize);
+
+                            PositionEntity positionEntity = new PositionEntity();
+                            positionEntity.setRect(new Rect(left, top, left + picSize, top + picSize));
+                            positionEntity.setType(WORKER);
+                            positionEntity.setX(j);
+                            positionEntity.setY(i);
+                            mPositionEntity = positionEntity;
                         }else if (i1 == BOX || i1 == BOX_AT_GOAL){
-                            int left = xoff + j * picSize;
-                            int top = yoff+ i * picSize;
-                            boxRectList.add(new Rect(left, top, left + picSize, top + picSize));
+                            PositionEntity positionEntity = new PositionEntity();
+                            positionEntity.setRect(new Rect(left, top, left + picSize, top + picSize));
+                            positionEntity.setType(i1);
+                            positionEntity.setX(j);
+                            positionEntity.setY(i);
+                            boxRectList.add(positionEntity);
                             if (i1 == BOX)  ++goalNumber;
                         }else if (i1 == GOAL){
                             ++goalNumber;
                         }
+                    }else {
+                        listPositionEntity.add(new PositionEntity(new Rect(left, top, left + picSize, top + picSize),i1,j,i));
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -299,8 +309,8 @@ public class SokobanSurfaceView extends SurfaceView implements
 
     private int personRow = 0;//当前人的行
     private int personColumn = 0;//当前人的列
-    private Rect personRect = null;//人的位置
-    private List<Rect> boxRectList = null;//箱子的位置集合
+    private PositionEntity mPositionEntity = null;//人的位置
+    private List<PositionEntity> boxRectList = null;//箱子的位置集合
     private List<int[][]> backList = null;//回退集合
     private List<int[][]> advanceList = null;//前进集合
 
@@ -574,8 +584,6 @@ public class SokobanSurfaceView extends SurfaceView implements
         bee_cachedThreadPool.submit(this);
     }
 
-    private Map<Integer,Integer> mapwei = new HashMap<>();
-
 
     private float y1;
     private float x1;
@@ -583,6 +591,7 @@ public class SokobanSurfaceView extends SurfaceView implements
     private float x2;
 
     private long time;
+    private boolean isTouchPosition = false;
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
@@ -591,8 +600,39 @@ public class SokobanSurfaceView extends SurfaceView implements
             //当手指按下的时候
             x1 = event.getX();
             y1 = event.getY();
+            Rect rect = mPositionEntity.getRect();
+            if (!rect.contains((int)x1,(int)y1)){
+                isTouchPosition = false;
+            }else {
+                isTouchPosition = true;
+            }
             time = System.currentTimeMillis();
         }else if(event.getAction() == MotionEvent.ACTION_MOVE) {
+            if (!isTouchPosition)return true;
+            float x1 = event.getX();
+            float y1 = event.getY();
+            if (mPositionEntity.getRect().contains((int)x1,(int)y1)){
+                return true;
+            }
+            for (PositionEntity positionEntity : listPositionEntity) {
+                Rect rect = positionEntity.getRect();
+                if (rect.contains((int)x1,(int)y1)){
+                    Rect personRect = mPositionEntity.getRect();
+                    if (positionEntity.getType() == ROAD || positionEntity.getType() == GOAL)//路 || 目标
+                    {
+                        if (rect.bottom <= personRect.top && rect.left == personRect.left && rect.right == personRect.right){//在人的上边
+                            up();
+                        }else if (rect.right <= personRect.left && rect.top == personRect.top && rect.bottom == personRect.bottom){//在人的左边
+                            left();
+                        }else if (rect.top >= personRect.bottom  && rect.left == personRect.left && rect.right == personRect.right){//在人的下边
+                            below();
+                        }else if (rect.left >= personRect.right && rect.top == personRect.top && rect.bottom == personRect.bottom){//在人的右边
+                            right();
+                        }
+                    }
+                    break;
+                }
+            }
 
         }else if(event.getAction() == MotionEvent.ACTION_UP) {
             if (System.currentTimeMillis() - time > 500)return false;
@@ -613,16 +653,74 @@ public class SokobanSurfaceView extends SurfaceView implements
                     right();
                 }
             }else {
-                if (personRect != null){
+                if (mPositionEntity != null){
+                    Rect personRect = mPositionEntity.getRect();
                     boolean contains = personRect.contains((int) x2, (int) y2);
                     if (contains)return false;
                     if (boxRectList != null){
-                        for (Rect rect : boxRectList) {
+                        for (PositionEntity positionEntity : boxRectList) {
+                            Rect rect = positionEntity.getRect();
                             if (rect.contains((int) x2, (int) y2)){
-                                Toast.makeText(getContext(),"contains",Toast.LENGTH_LONG).show();
-                                break;
+                                if (personRect.intersect(new Rect(rect.left - picSize,rect.top,rect.right - picSize,rect.bottom))){//左边
+                                    right();
+                                }
+                                else if (personRect.intersect(new Rect(rect.left + picSize,rect.top,rect.right + picSize,rect.bottom))){//右边
+                                    left();
+                                }
+                                else if (personRect.intersect(new Rect(rect.left,rect.top - picSize,rect.right,rect.bottom - picSize))){//上边
+                                    below();
+                                }
+                                else if (personRect.intersect(new Rect(rect.left,rect.top + picSize,rect.right,rect.bottom + picSize))){//下边
+                                    up();
+                                }else {
+                                    Toast.makeText(getContext(),"contains",Toast.LENGTH_LONG).show();
+                                }
+                                return true;
                             }
                         }
+//                        Rect rect_row = new Rect(personRect.left, yoff, personRect.right, row * picSize + yoff);//竖直
+//                        if (rect_row.contains((int)x2,(int)y2)){
+//
+//                        }else {//横向
+////                            Rect rect_column = new Rect(xoff, personRect.top, column * xoff, personRect.bottom);//横向
+//                            Rect rect1 = new Rect(xoff, personRect.top, column * picSize + xoff, personRect.bottom);
+//                            if (rect1.contains((int)x2,(int)y2))
+//                            fi:
+//                            for (int i = 0; i < tem.length; i++) {
+//                                for (int j = 0; j < tem[i].length; j++) {
+//                                    int left = xoff + j * picSize;
+//                                    int top = yoff+ i * picSize;
+//                                    Rect rect = new Rect(left, top, left + picSize, top + picSize);
+//                                   if (rect.contains((int)x2,(int)y2)){
+//                                       if (tem[i][j] == ROAD){
+//                                           if (mPositionEntity.getX() > j){
+//                                               for (int i1 = mPositionEntity.getX() - 1; j < i1; i1--) {
+//                                                   if (tem[i][i1] != ROAD){
+//                                                       return true;
+//                                                   }
+//                                               }
+//                                               for (int i1 = 0; i1 < (mPositionEntity.getX() + 1 - j); i1++) {
+//                                                   left();
+//                                               }
+//                                               return true;
+//                                           }else if (mPositionEntity.getX() < j){
+//                                               for (int i1 = mPositionEntity.getX() + 1; i1 < j ; i1++) {
+//                                                   if (tem[i][i1] != ROAD){
+//                                                       return true;
+//                                                   }
+//                                               }
+//                                               for (int i1 = 0; i1 < (j + 1 - mPositionEntity.getX()); i1++) {
+//                                                   right();
+//                                               }
+//                                               return true;
+//                                           }
+//                                       }
+//                                       break fi;
+//                                   }
+//                                }
+//                            }
+//                        }
+
                     }
 
                 }

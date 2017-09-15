@@ -36,19 +36,33 @@ public class PositionEntity implements Serializable, Parcelable {
     public void setType(int type) {
         this.type = type;
     }
-
+    /**
+     * 列
+     * @return column
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * 列
+     * @param x column
+     */
     public void setX(int x) {
         this.x = x;
     }
-
+    /**
+     * 行
+     * @return row
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     * 行
+     * @param y row
+     */
     public void setY(int y) {
         this.y = y;
     }
@@ -64,6 +78,13 @@ public class PositionEntity implements Serializable, Parcelable {
         dest.writeInt(this.type);
         dest.writeInt(this.x);
         dest.writeInt(this.y);
+    }
+
+    public PositionEntity(Rect rect, int type, int x, int y) {
+        this.rect = rect;
+        this.type = type;
+        this.x = x;
+        this.y = y;
     }
 
     public PositionEntity() {
