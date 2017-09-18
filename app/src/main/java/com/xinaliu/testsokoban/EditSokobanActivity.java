@@ -105,7 +105,7 @@ public class EditSokobanActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.finish:
                 mEditSokobanSurfaceView.setPaintType(mEditSokobanSurfaceView.BOX_AT_GOAL);
-                Toast.makeText(this, "点击了 完成", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "点击了 完成", Toast.LENGTH_LONG).show();//步骤
                 resId = R.drawable.box_at_goal;
                 break;
             case R.id.clear:

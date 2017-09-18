@@ -69,14 +69,13 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             mSokobanSurfaceView.right();
         }
         else if (id == R.id.next_level){
-            GameDataStruct gameDataStruct = new GameDataStruct(GameStateDataProvider.getGameStateData(p), true);
-            int checkData = gameDataStruct.checkData();
-            Toast.makeText(GameActivity.this,"checkData\t"+checkData,Toast.LENGTH_LONG).show();
 
             ++p;
             if (GameStateDataProvider.getGameStateToltalNumer() <= p){
                 p = 0;
             }
+//            Toast.makeText(GameActivity.this,"checkData\t"+checkData,Toast.LENGTH_LONG).show();
+            Toast.makeText(GameActivity.this,"第\t"+p+"\t关",Toast.LENGTH_LONG).show();
             mSokobanSurfaceView.start(GameStateDataProvider.getGameStateData(p));
         }
         else if (id == R.id.advance){
